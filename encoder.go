@@ -67,7 +67,7 @@ func (enc *Encoder) format(n *Node, lvl int) error {
 			enc.write(label)
 			enc.write("\": ")
 
-			if n.ChildrenAlwaysAsArray || len(children) > 1 {
+			if n.ChildrenAlwaysAsArray || len(children) > 0 {
 				// Array
 				enc.write("[")
 				for j, c := range children {
